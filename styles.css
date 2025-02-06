@@ -88,19 +88,134 @@
     --fs-500: 1.125rem;
     --fs-600: 1.375rem;
 
-    --spacing-s: 1rem;
-    --spacing-m: 1.5rem;
-    --spacing-l: 2.5rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
 
-    --border-radius: 1.25;
+    --border-radius-1: 0.625rem;
+    --border-radius-2: 1.25rem;
+
+    --line-height-s: 1.2;
+    --line-height-m: 1.4;
+    --letter-spacing-w: 0.013em;
+    --letter-spacing-n: 0;
 
     /* Semantic Layer */
     /* in another selector for syntax highlighting reasons only */
   }
   :root {
+    --measure: 60ch;
+
     --text-main: var(--clr-slate-500);
     --text-high-contrast: var(--clr-slate-900);
 
-    --background-light: var(--clr-white);
+    --background-white: var(--clr-white);
+    --background-light: var(--clr-slate-300);
+  }
+}
+
+@layer base {
+  html {
+    font-family: var(--ff);
+    line-height: var(--line-height-m);
+  }
+
+  body {
+    font-size: var(--fs-300);
+    color: var(--text-main);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    max-inline-size: var(--measure);
+    color: var(--text-high-contrast);
+  }
+
+  p {
+    max-inline-size: var(--measure);
+  }
+
+  img {
+    border-radius: var(--border-radius-1);
+  }
+}
+
+@layer layout {
+  .cover {
+    display: flex;
+    flex-direction: column;
+    min-block-size: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .box {
+    padding: var(--spacing-sm);
+  }
+
+  .wrapper {
+    padding-inline: var(--spacing-sm);
+  }
+
+  .stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .stack > * {
+    margin-block: 0;
+  }
+
+  .stack > * + * {
+    margin-block-start: var(--spacing-sm);
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 20rem;
+    border-radius: var(--border-radius-1);
+    background-color: var(--background-light);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  }
+  .figure {
+    max-width: 288px;
+  }
+
+  .heading {
+    line-height: var(--line-height-s);
+    letter-spacing: var(--letter-spacing-n);
+  }
+
+  .text {
+    line-height: var(--line-height-m);
+    letter-spacing: var(--letter-spacing-w);
+    font-weight: 300;
+  }
+}
+
+@layer utilities {
+  .text\:center {
+    text-align: center;
+  }
+
+  .bg\:white {
+    background-color: var(--background-white);
+  }
+
+  .bg\:light {
+    background-color: var(--background-light);
+  }
+
+  .mb\:xs {
+    margin-bottom: var(--spacing-xs);
+  }
+  .pb\:lg {
+    padding-bottom: var(--spacing-lg);
   }
 }

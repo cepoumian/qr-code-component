@@ -63,13 +63,6 @@
     max-inline-size: 100%;
     display: block;
   }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
 }
 
 @layer base {
@@ -181,9 +174,12 @@
     max-width: 20rem;
     border-radius: var(--border-radius-1);
     background-color: var(--background-light);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.5rem var(--clr-slate-500);
   }
+
   .figure {
+    display: flex;
+    flex-direction: column;
     max-width: 288px;
   }
 

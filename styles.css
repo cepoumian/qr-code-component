@@ -71,3 +71,36 @@
     font: inherit;
   }
 }
+
+@layer base {
+  /* Primitives */
+  :root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-slate-300: hsl(212, 45%, 89%);
+    --clr-slate-500: hsl(216, 15%, 48%);
+    --clr-slate-900: hsl(218, 44%, 22%);
+
+    --ff: "Outfit", sans-serif;
+
+    --fs-300: 0.938rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.375rem;
+
+    --spacing-s: 1rem;
+    --spacing-m: 1.5rem;
+    --spacing-l: 2.5rem;
+
+    --border-radius: 1.25;
+
+    /* Semantic Layer */
+    /* in another selector for syntax highlighting reasons only */
+  }
+  :root {
+    --text-main: var(--clr-slate-500);
+    --text-high-contrast: var(--clr-slate-900);
+
+    --background-light: var(--clr-white);
+  }
+}

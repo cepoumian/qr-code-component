@@ -112,8 +112,9 @@ On the other hand, I also wanted to leverage CSS layers as a way of organizing s
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Every Layout](https://www.example.com) - This is, by far, one of the most valuable resources on CSS and web layout I've found. Highly recomended.
+
+- Kevin Powell (Frontend Master's course)[https://frontendmasters.com/courses/pro-css/] - One of CSS's greatest educators.
 
 ## Author
 

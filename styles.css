@@ -185,6 +185,7 @@
   .heading {
     line-height: var(--line-height-s);
     letter-spacing: var(--letter-spacing-n);
+    font-size: var(--fs-600);
   }
 
   .text {
